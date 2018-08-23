@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		The Venturer
+	</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap\css\bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+	  <a class="navbar-brand" href="#">The Venturer</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Profile <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item" onclick="postToggle();">
+	        <a class="nav-link" href="#">New Post <span class="sr-only">(current)</span></a>
+	      </li>
+	    </ul>
+	    <form class="form-inline my-2 my-lg-0">
+	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	    </form>
+	    <form class="form-inline">
+	    	<button type="button" class="btn btn-outline-success" onclick="loginPage()">Login</button>
+	    </form>
+	  </div>
+	</nav>
+
+	<section class="new-post-wrapper">
+		<div class="new-post">
+			<div class="new-post-text">
+				<h1>New Post</h1>
+			</div>
+			<form id="new-post-form" name="new-post-form" method="post" action="newpost.php" enctype="multipart/form-data">
+				<div class="form-group">
+					<label for="post-title">Title:</label>
+    				<input type="text" class="form-control" name="title" id="post-title" placeholder="Title">
+				</div>
+				<div class="form-group">
+					<label for="post-text">Text:</label>
+    				<input type="text" class="form-control" name="text" id="post-text" placeholder="Text">
+				</div>
+				<div class="form-group">
+					<label for="post-title">Photo:</label>
+    				<input type="file" class="form-control" accept="image/*" name="photo" id="post-photo" placeholder="Photo">
+				</div>
+				<div class="submit-btn">
+					<button type="submit" class="btn btn-outline-success">Submit</button>
+					<button type="button" onclick="postToggle()" class="btn btn-outline-success">Close</button>
+				</div>
+				
+			</form>
+		</div>
+	</section>
+
+	<section class="banner-wrapper">
+		<div class="banner">
+			<div class="banner-text">
+				<h1>ADLFkjlsd LAKfj laksdLfk</h1>
+				<h3>adksfjas;ld asldkfj asdf</h3>
+			</div>
+		</div>
+	</section>
+	<section class="main container-fluid">
+		<div class="row">
+			<div class="col-sm-9">
+				<div class="blog-post">
+					<div class="blog-title">
+						<h1>First Post</h1>
+					</div>
+					<div class="blog-img">
+						<img src="images\sevenwonders.jpg" width="100%">
+					</div>
+					<div class="blog-text">
+						<p>asdkjhf alksjd hflkjashf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf </p>
+					</div>
+					<div class="blog-button">
+						<button type="button" class="btn btn-outline-success">Read More</button>
+					</div>
+				</div>
+				<div class="blog-post">
+					<div class="blog-title">
+						<h1>First Post</h1>
+					</div>
+					<div class="blog-img">
+						<img src="images\sevenwonders.jpg" width="100%">
+					</div>
+					<div class="blog-text">
+						<p>asdkjhf alksjd hflkjashf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf </p>
+					</div>
+					<div class="blog-button">
+						<button type="button" class="btn btn-outline-success">Read More</button>
+					</div>
+				</div>
+				<div class="blog-post">
+					<div class="blog-title">
+						<h1>First Post</h1>
+					</div>
+					<div class="blog-img">
+						<img src="images\sevenwonders.jpg" width="100%">
+					</div>
+					<div class="blog-text">
+						<p>asdkjhf alksjd hflkjashf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf </p>
+					</div>
+					<div class="blog-button">
+						<button type="button" class="btn btn-outline-success">Read More</button>
+					</div>
+				</div>
+				<div class="blog-post">
+					<div class="blog-title">
+						<h1>First Post</h1>
+					</div>
+					<div class="blog-img">
+						<img src="images\sevenwonders.jpg" width="100%">
+					</div>
+					<div class="blog-text">
+						<p>asdkjhf alksjd hflkjashf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf </p>
+					</div>
+					<div class="blog-button">
+						<button type="button" class="btn btn-outline-success">Read More</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				
+			</div>
+		</div>
+	</section>
+  	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
