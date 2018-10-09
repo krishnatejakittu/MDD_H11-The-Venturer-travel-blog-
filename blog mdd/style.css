@@ -27,7 +27,7 @@ body {
 }
 
 .blog-post {
-	width: 30%;
+	width: 31.8%;
 	float: left;
 	padding: 10px;
 	margin: 0 1.5% 1.5% 0;
@@ -35,12 +35,15 @@ body {
 	box-shadow: 0px 0px 10px 1px #757575;
 	background: white;
 }
-.blog-title {
+.blog-title, .read-post-title {
 	text-align: center;
 }
-.blog-img img {
+.blog-img img, .read-post-img img {
 	display: block;
 	margin: auto;
+}
+.read-post-img img {
+	max-height: 400px;
 }
 .blog-text {
 	display: none;
@@ -78,7 +81,7 @@ body {
 	display: none;
 }
 
-.new-post-wrapper {
+.new-post-wrapper, .read-post-wrapper {
 	display: none;
 	position: absolute;
 	top: 50%;

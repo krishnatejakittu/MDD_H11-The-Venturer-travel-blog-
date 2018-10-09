@@ -22,7 +22,7 @@
 	      <li class="nav-item">
 	        <a class="nav-link" href="#">Profile <span class="sr-only">(current)</span></a>
 	      </li>
-	      <li class="nav-item" onclick="postToggle();">
+	      <li class="nav-item" onclick="newPostToggle();">
 	        <a class="nav-link" href="#">New Post <span class="sr-only">(current)</span></a>
 	      </li>
 	    </ul>
@@ -63,10 +63,27 @@
 				</div>
 				<div class="submit-btn">
 					<button type="submit" class="btn btn-outline-success">Submit</button>
-					<button type="button" onclick="postToggle()" class="btn btn-outline-success">Close</button>
+					<button type="button" onclick="newPostToggle()" class="btn btn-outline-success">Close</button>
 				</div>
 				
 			</form>
+		</div>
+	</section>
+
+	<section class="read-post-wrapper">
+		<div class="read-post">
+			<div class="read-post-title">
+				<h1></h1>
+			</div>
+			<div class="read-post-img">
+				<img src="">
+			</div>
+			<div class="read-post-content">
+				<p></p>
+			</div>
+			<div class="read-post-button">
+				<button type="button" class="btn btn-outline-success">Close</button>
+			</div>
 		</div>
 	</section>
 
@@ -80,65 +97,45 @@
 	</section>
 	<section class="main container-fluid">
 		<div class="row">
-			<div class="col-sm-9">
-				<div class="blog-post">
-					<div class="blog-title">
-						<h1>First Post</h1>
-					</div>
-					<div class="blog-img">
-						<img src="images\sevenwonders.jpg" width="100%">
-					</div>
-					<div class="blog-text">
-						<p>asdkjhf alksjd hflkjashf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf </p>
-					</div>
-					<div class="blog-button">
-						<button type="button" class="btn btn-outline-success">Read More</button>
-					</div>
-				</div>
-				<div class="blog-post">
-					<div class="blog-title">
-						<h1>First Post</h1>
-					</div>
-					<div class="blog-img">
-						<img src="images\sevenwonders.jpg" width="100%">
-					</div>
-					<div class="blog-text">
-						<p>asdkjhf alksjd hflkjashf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf </p>
-					</div>
-					<div class="blog-button">
-						<button type="button" class="btn btn-outline-success">Read More</button>
-					</div>
-				</div>
-				<div class="blog-post">
-					<div class="blog-title">
-						<h1>First Post</h1>
-					</div>
-					<div class="blog-img">
-						<img src="images\sevenwonders.jpg" width="100%">
-					</div>
-					<div class="blog-text">
-						<p>asdkjhf alksjd hflkjashf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf </p>
-					</div>
-					<div class="blog-button">
-						<button type="button" class="btn btn-outline-success">Read More</button>
-					</div>
-				</div>
-				<div class="blog-post">
-					<div class="blog-title">
-						<h1>First Post</h1>
-					</div>
-					<div class="blog-img">
-						<img src="images\sevenwonders.jpg" width="100%">
-					</div>
-					<div class="blog-text">
-						<p>asdkjhf alksjd hflkjashf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf lkajhds flkjah dflkjhasd flkjhas dlfkjhasdlkfjh asldkjhf alksdjhf laksjhf lkajsh dfkljahds flkah sdfkljhas dflkjh asdlkfjh asldkjfh alskdjhf laksjdhf laksjhf laksjhf </p>
-					</div>
-					<div class="blog-button">
-						<button type="button" class="btn btn-outline-success">Read More</button>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-3">
+			<div class="col-sm-12">
+				<?php
+
+				$servername = "localhost";
+				$username = "root";
+				$password = "";
+				$dbname = "blogmdd";
+
+				$count = 0;
+
+				$conn = new mysqli($servername, $username, $password, $dbname);
+				// Check connection
+				if ($conn->connect_error) {
+				    die("Connection failed: " . $conn->connect_error);
+				}
+
+				$query = "SELECT * FROM postdetails";
+				$sql = $conn->query($query);
+				if($sql->num_rows > 0) {
+					while($row = $sql->fetch_assoc()) {
+						echo "<div class='blog-post' id='post$count'>
+								<div class = 'blog-title'>
+									<h1>" . $row['title'] . "</h1>
+								</div>
+								<div class='blog-img'>
+									<img src='" . $row['photopath'] . "' width='100%'>
+								</div>
+								<div class='blog-text'>
+									<p>" . $row['postcontent'] . "</p>
+								</div>
+								<div class='blog-button'>
+									<button type='button' class='btn btn-outline-success' onclick='postToggle($count)'>Read More</button>
+								</div>
+							</div>";
+							$count += 1;
+					}
+				}
+
+				?>
 				
 			</div>
 		</div>

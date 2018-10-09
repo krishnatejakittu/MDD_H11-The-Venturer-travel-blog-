@@ -13,7 +13,7 @@ $dbname = "blogmdd";
 $email = $_POST["email"];
 $pwd = $_POST["pass"];
 
-echo "email $email";
+echo "email `$email`";
 echo "pass $pwd";
 
 // Create connection
@@ -23,15 +23,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM login WHERE email LIKE '$email' and pass LIKE '$pwd'";
+$sql = "SELECT * FROM userdetails WHERE email LIKE '$email' and password LIKE '$pwd'";
 $result = $conn->query($sql);
 
-if (($result->num_rows) == 1) {
+if ($result->num_rows > 0) {
     header("Location:index.php");
     $_SESSION['email'] = $email;
 } else {
     header("Location:login.php");
-    die();
 }
 
 $conn->close();

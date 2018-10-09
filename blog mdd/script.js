@@ -1,12 +1,7 @@
 $(document).ready(function() {
-	$(".blog-button button").click(function() {
-		$(this).parent().prev().toggle();
-		if($(this).html() == "Read More") {
-			$(this).html("Read Less");
-		}
-		else {
-			$(this).html("Read More");		}
-	})
+	$(".read-post-button button").click(function() {
+		$(".read-post-wrapper").hide();
+	});
 });
 
 function formToggle() {
@@ -22,8 +17,15 @@ function formToggle() {
 	}
 }
 
-function postToggle() {
+function newPostToggle() {
 	$(".new-post-wrapper").toggle();
+}
+
+function postToggle($count) {
+	$(".read-post-title h1").html($("#post" + $count).find(".blog-title h1").html());
+	$(".read-post-img img").attr("src",$("#post" + $count).find(".blog-img img").attr("src"));
+	$(".read-post-content p").html($("#post" + $count).find(".blog-text p").html());
+	$(".read-post-wrapper").show();
 }
 
 function loginPage() {
