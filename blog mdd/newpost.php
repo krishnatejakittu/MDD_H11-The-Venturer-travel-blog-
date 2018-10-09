@@ -26,13 +26,7 @@ extract($_POST);
 $email = $_SESSION['email'];
 $target_path="images\\";
 $target_path=$target_path . basename($_FILES['photo']['name']);
-$imgFileType = strtolower(pathinfo($target_path, PATHINFO_EXTENSION));
-//echo "$imgFileType";
-//$target_path = $target_path . "." . $imgFileType;
-move_uploaded_file($_FILES['photo']['tmp_name'], $target_path);
-echo "$target_path";
 $target_path = quotemeta($target_path);
-echo "$target_path";
 $query = "INSERT INTO POSTDETAILS VALUES('$email', '$title', '$target_path', '$text')";
 
 $sql = $conn->query($query);
