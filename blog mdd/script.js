@@ -21,6 +21,10 @@ function newPostToggle() {
 	$(".new-post-wrapper").toggle();
 }
 
+function profileToggle() {
+	$(".profile-wrapper").toggle();
+}
+
 function postToggle($count) {
 	$(".read-post-title h1").html($("#post" + $count).find(".blog-title h1").html());
 	$(".read-post-img img").attr("src",$("#post" + $count).find(".blog-img img").attr("src"));

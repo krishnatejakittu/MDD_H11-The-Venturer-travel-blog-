@@ -35,7 +35,10 @@ body {
 	box-shadow: 0px 0px 10px 1px #757575;
 	background: white;
 }
-.blog-title, .read-post-title {
+span.color-green {
+	color: #28a745;
+}
+.blog-title, .read-post-title, .profile {
 	text-align: center;
 }
 .blog-img img, .read-post-img img {
@@ -81,7 +84,7 @@ body {
 	display: none;
 }
 
-.new-post-wrapper, .read-post-wrapper {
+.new-post-wrapper, .read-post-wrapper, .profile-wrapper {
 	display: none;
 	position: absolute;
 	top: 50%;

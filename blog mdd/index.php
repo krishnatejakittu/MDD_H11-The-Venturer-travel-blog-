@@ -20,7 +20,7 @@
 	        <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">Profile <span class="sr-only">(current)</span></a>
+	        <a class="nav-link" href="#" onclick="profileToggle()">Profile <span class="sr-only">(current)</span></a>
 	      </li>
 	      <li class="nav-item" onclick="newPostToggle();">
 	        <a class="nav-link" href="#">New Post <span class="sr-only">(current)</span></a>
@@ -42,6 +42,43 @@
 	    </form>
 	  </div>
 	</nav>
+
+	<section class="profile-wrapper">
+		<div class="profile">
+			<?php
+
+				if(isset($_SESSION['email'])) {
+					$servername = "localhost";
+					$username = "root";
+					$password = "";
+					$dbname = "blogmdd";
+
+					$conn = new mysqli($servername, $username, $password, $dbname);
+
+					$em = $_SESSION['email'];
+
+					$query = "SELECT * FROM userdetails WHERE email LIKE '$em'";
+					$sql = $conn->query($query);
+					if($sql->num_rows) {
+						$row = $sql->fetch_assoc();
+						echo "<h1> USER DETAILS </h1>";
+						echo "<div class='profile-name'>
+								<h1><span class='color-green'>Name:</span> " . $row['name'] . "
+						</h1></div>";
+						echo "<div class='profile-email'>
+								<h1><span class='color-green'>Email:</span> " . $row['email'] . "</h1></div>";
+						echo "<div class='profile-button'>
+								<button type='button' class='btn btn-outline-success' onclick='profileToggle()'>Close</button>
+								</div>";
+					}
+				}
+				else {
+					header("location: login.php");
+				}
+
+			?>
+		</div>
+	</section>
 
 	<section class="new-post-wrapper">
 		<div class="new-post">
